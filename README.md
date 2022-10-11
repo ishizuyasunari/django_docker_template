@@ -10,7 +10,6 @@ https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 docker-compose build
 docker-compose up -d
 
-(base) ishizu.yasunari@hm-p1186 django_docker_template % docker ps
 CONTAINER ID   IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES
 a1e1c84b9f40   mysql:5.7           "docker-entrypoint.s…"   About a minute ago   Up About a minute   3306/tcp, 33060/tcp      django_docker_template-db-1
 b50f2861bc6e   django-web:django   "python manage.py ru…"   4 minutes ago        Up 12 seconds       0.0.0.0:8000->8000/tcp   django_docker_template-web-1

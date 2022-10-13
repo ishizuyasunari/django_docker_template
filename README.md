@@ -10,9 +10,10 @@ https://docs.djangoproject.com/en/4.1/intro/tutorial01/
 docker-compose build
 docker-compose up -d
 
-CONTAINER ID   IMAGE               COMMAND                  CREATED              STATUS              PORTS                    NAMES
-a1e1c84b9f40   mysql:5.7           "docker-entrypoint.s…"   About a minute ago   Up About a minute   3306/tcp, 33060/tcp      django_docker_template-db-1
-b50f2861bc6e   django-web:django   "python manage.py ru…"   4 minutes ago        Up 12 seconds       0.0.0.0:8000->8000/tcp   django_docker_template-web-1
+CONTAINER ID   IMAGE                     COMMAND                  CREATED         STATUS              PORTS                           NAMES
+f31f75f4ddf2   django-web:django         "python manage.py ru…"   3 minutes ago   Up About a minute   0.0.0.0:8000->8000/tcp          django_docker_template-web-1
+0a9d8e596b8c   mysql:5.7                 "docker-entrypoint.s…"   3 minutes ago   Up 3 minutes        3306/tcp, 33060/tcp             django_docker_template-db-1
+7e54bc79e20f   steveltn/https-portal:1   "/init"                  3 minutes ago   Up 3 minutes        80/tcp, 0.0.0.0:3443->443/tcp   django_docker_template-https-1
 ```
 
 # make init config
@@ -58,10 +59,8 @@ root@b50f2861bc6e:/django#
 ```
 
 # endpoints
-```
-http://localhost:8000/admin/
-http://localhost:8000/sample/
-```
+https://localhost:3443/admin/  
+https://localhost:3443/sample/  
 
 # troubleshoot
 
